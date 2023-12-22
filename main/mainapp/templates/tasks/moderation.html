@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Moderation</title>
+</head>
+
+<body>
+    <h2>Moderation</h2>
+    <ul>
+        {% for task in tasks_to_moderate %}
+        <li>{{ task.text }}</li>
+        <a href="{% url 'moderate_task' task.id %}">Moderate Task</a> {% endfor %}
+    </ul>
+</body>
+
+</html>

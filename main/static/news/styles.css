@@ -1,0 +1,145 @@
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.navbar {
+    background-color: #d1b60a;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-bottom: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.btn-13 {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 60px;
+    transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.btn-13:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #c86f03;
+    left: 100%;
+    top: 0;
+    z-index: -1;
+    transition: left 0.3s;
+}
+
+.btn-13:hover:before {
+    left: 0;
+}
+
+.btn-13:hover {
+    color: #000000a9;
+}
+
+.news-box {
+    /* margin-top: 15%; */
+    display: block;
+    border: none;
+    background: none;
+    position: relative;
+    top: 100px;
+}
+
+.news-box a {
+    color: #000000;
+    font-size: 24px;
+    text-decoration: none;
+    padding-right: 90%;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+.news-box a:hover {
+    background-color: rgb(195, 192, 192);
+}
+.new-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.new-content {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.newsdetail {
+    padding: 50px;
+        margin-top: 100px; /* добавляем отступ сверху */
+
+}
+
+.menu-btn {
+    display: none;
+}
+@media (max-width: 1155px) {
+    .navbar {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: -300px;
+        width: 240px;
+        height: 100%;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        transition: left 0.3s ease;
+    }
+    .navbar ul {
+        list-style: none;
+        padding: 0;
+    }
+      
+    .navbar li {
+        margin-bottom: 10px;
+    }
+      
+    .menu-btn {
+        display: flex;
+        position: fixed;
+        bottom: 20px; /* Расстояние от нижней границы экрана */
+        left: 20px; /* Расстояние от правой границы экрана */
+        justify-content: center;
+        align-items: center;
+        width: 40px; /* Ширина кнопки */
+        height: 40px; /* Высота кнопки */
+        border-radius: 50%; /* Для создания круглой формы */
+        background-color: yellow; /* Желтый цвет */
+        color: black; /* Цвет текста */
+        font-size: 20px; /* Размер шрифта */
+        cursor: pointer;
+        z-index: 9999; /* Чтобы кнопка оставалась поверх других элементов */
+    }
+    
+
+}

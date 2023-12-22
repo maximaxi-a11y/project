@@ -1,0 +1,43 @@
+<!-- {% load static%} -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Rubik:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../static/pexels/styles.css">
+    <title>Поиск картинок</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="btn-13">
+            <img src="ai.png" alt="Чат" class="icon"> Чат
+        </a>
+        <a href="#" class="btn-13">
+            <img src="search.png" alt="Поиск" class="icon"> Поиск картинок
+        </a>
+        <a href="#" class="btn-13">
+            <img src="user.png" alt="Профиль" class="icon">Профиль
+        </a>
+        <a href="#" class="btn-13">
+            <img src="books-stack-of-three.png" alt="Предметы" class="icon">Предметы
+        </a>
+        <a href="#" class="btn-13">
+            <img src="megaphone.png" alt="Новости" class="icon">Новости
+        </a>
+    </div>
+    <div class="chat-container">
+        <div class="chat-messages" id="chat-messages">
+            <!-- Здесь будут сообщения чата -->
+        </div>
+        <form id="pexels-form" class="chat-input" method="post">
+            <!-- {% csrf_token %} -->
+            <label for="user-message"></label>
+            <input type="text" id="user-message" placeholder="Введите ваш запрос">
+            <button type="button" id="send-button">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>

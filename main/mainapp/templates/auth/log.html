@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '\register\styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+
+<body>
+    <form class="registration" method="POST">
+        {% csrf_token %}
+        <h1>👋 Привет!</h1>
+        <label class="pure-material-textfield-outlined" for="username">
+            {{form.username}}
+            <span>Имя пользователя</span>
+        </label>
+        <label class="pure-material-textfield-outlined" for="email">
+            {{form.password}}
+            
+          <span>Пароль</span>
+        </label>
+        <label class="pure-material-checkbox">
+          <input type="checkbox" required>
+          <span>Я соглашаюсь с <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" title="На самом деле это не соглашение">Согл. Польз.</a><br></span>
+          <span>Нет аккаунта?<br><a href="../register/" title="На самом деле это не соглашение">Создать аккаунт.</a></span>
+        </label>
+
+        <button class="pure-material-button-contained" type="submit">Войти в аккаунт</button>
+
+        <div class="done">
+            <h1>👌 Все готово!</h1>
+            <a class="pure-material-button-text" href="javascript:window.location.reload(true)">Again</a>
+        </div>
+        <div class="progress">
+            <progress class="pure-material-progress-circular">
+        </div> 
+    </form>
+
+
+    <script>
+        var form = document.querySelector('form');
+        form.onsubmit = function (event) {
+            form.classList.add('signed');
+        };
+    </script>
+</body>
+
+</html>

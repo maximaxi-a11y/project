@@ -1,0 +1,189 @@
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.navbar {
+    background-color: #d1b60a;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.btn-13 {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 60px;
+    transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.btn-13:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #c86f03;
+    left: 100%;
+    top: 0;
+    z-index: -1;
+    transition: left 0.3s;
+}
+
+.btn-13:hover:before {
+    left: 0;
+}
+
+.btn-13:hover {
+    color: #000000a9;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 90vw;
+}
+
+.chat-message {
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    max-width: 100%;
+    /* display: block; */
+    word-wrap: break-word;
+    display: inline-block;
+    white-space: pre-wrap;
+}
+
+.chat-message.user {
+    background-color: #11c8cf;
+    color: #000;
+    align-self: flex-start;
+}
+
+.chat-message.sent {
+    background-color: #0b9a63;
+    color: #000;
+    align-self: flex-start;
+}
+
+.chat-input {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-13 {
+        margin: 5px;
+    }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+.menu-btn {
+    display: none;
+}
+@media (max-width: 1155px) {
+    .navbar {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: -300px;
+        width: 240px;
+        height: 100%;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        transition: left 0.3s ease;
+    }
+    .navbar ul {
+        list-style: none;
+        padding: 0;
+    }
+      
+    .navbar li {
+        margin-bottom: 10px;
+    }
+      
+    .menu-btn {
+        display: flex;
+        position: fixed;
+        bottom: 20px; /* Расстояние от нижней границы экрана */
+        left: 20px; /* Расстояние от правой границы экрана */
+        justify-content: center;
+        align-items: center;
+        width: 40px; /* Ширина кнопки */
+        height: 40px; /* Высота кнопки */
+        border-radius: 50%; /* Для создания круглой формы */
+        background-color: yellow; /* Желтый цвет */
+        color: black; /* Цвет текста */
+        font-size: 20px; /* Размер шрифта */
+        cursor: pointer;
+        z-index: 9999; /* Чтобы кнопка оставалась поверх других элементов */
+    }
+    
+
+}

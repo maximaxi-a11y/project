@@ -1,0 +1,55 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Rubik:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{%static 'news/styles.css'%}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+
+        <a href="../chat" class="btn-13">
+            <img src="{%static 'chat/ai.png'%}" alt="Чат" class="icon"> Чат
+        </a>
+        <a href="../profile/" class="btn-13">
+            <img src="{%static 'chat/user.png'%}" alt="Профиль" class="icon">Профиль
+        </a>
+        <a href="#" class="btn-13">
+            <img src="{%static 'chat/books-stack-of-three.png'%}" alt="Предметы" class="icon">Предметы
+        </a>
+        <a href="../news/" class="btn-13">
+            <img src="{%static 'chat/megaphone.png'%}" alt="Новости" class="icon">Новости
+        </a>
+    </div>
+    <div class="news-box">
+        {% for item in news %}
+        <h2><a href="{{item.id}}"><b>Тема: </b>{{ item.text }}</a></h2>
+        {% endfor %}
+    </div>
+
+    <div class="menu-btn" onclick="toggleNavbar()">☰</div>
+
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById('navbar');
+            var navbar = document.getElementById('navbar');
+            var clickPos = event.clientX;
+            var navbarRightPos = navbar.getBoundingClientRect().right;
+            if (navbar.style.left === "" || navbar.style.left === "-300px") {
+                navbar.style.left = "-70px";
+
+            } else {
+                navbar.style.left = "-300px";
+            }
+        }
+    </script>
+</body>
+
+</html>
